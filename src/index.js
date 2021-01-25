@@ -1,1 +1,3 @@
-console.log("Testing webpack");
+import { initialPageLoad } from './pageLoad.js';
+
+initialPageLoad();
