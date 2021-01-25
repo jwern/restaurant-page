@@ -1,3 +1,12 @@
 #header-image {
   width: 800px;
 }
+
+.nav-links ul#navigation {
+  display: flex;
+}
+
+.nav-links ul#navigation li {
+  list-style-type: none;
+  margin: 20px;
+}
