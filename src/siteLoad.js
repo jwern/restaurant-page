@@ -1,11 +1,12 @@
-import { loadHomePage } from './homePage.js'
-import { loadClickedPage } from './navbar.js'
+import { buildPage } from './buildPage.js';
+import { homepageContent } from './pageContent.js';
+import { loadClickedPage } from './navbar.js';
 
 function initialPageLoad() {
   let pageTabs = createTabs();
   document.body.prepend(pageTabs);
 
-  loadHomePage();
+  buildPage(homepageContent);
 }
 
 function createTabs() {

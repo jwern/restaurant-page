@@ -1,3 +1,3 @@
-import { initialPageLoad } from './pageLoad.js';
+import { initialPageLoad } from './siteLoad.js';
 
 initialPageLoad();

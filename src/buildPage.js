@@ -1,20 +1,18 @@
-function loadContactPage() {
+function buildPage(page) {
   let pageContent = document.getElementById('content');
 
   let headerContainer = document.createElement('div');
   headerContainer.id = "header-image";
-  headerContainer.style.backgroundImage = "url(images/header_image.jpg)";
-  // let headerImage = document.createElement('img');
-  // headerImage.src = "images/header_image.jpg";
-  // headerImage.id = "header-image";
+  headerContainer.style.backgroundImage = `url(${page["headerImage"]})`;
+  headerContainer.style.backgroundPosition = page["headerPosition"]
 
   let pageTitle = document.createElement('h1');
   pageTitle.id = "page-title";
-  pageTitle.innerText = "Contact Us";
+  pageTitle.innerText = page["pageTitle"];
 
   let pageText = document.createElement('p');
   pageText.id = "page-intro";
-  pageText.innerText = "Here's how you can contact us.";
+  pageText.innerText = page["pageContent"];
 
   let children = [
     headerContainer, 
@@ -27,4 +25,4 @@ function loadContactPage() {
   };
 }
 
-export { loadContactPage };
+export { buildPage };

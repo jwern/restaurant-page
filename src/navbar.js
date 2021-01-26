@@ -1,12 +1,11 @@
-import { loadHomePage } from './homePage.js';
-import { loadMenuPage } from './menuPage.js';
-import { loadContactPage } from './contactPage.js';
+import { homepageContent, menupageContent, contactpageContent } from './pageContent.js';
+import { buildPage } from './buildPage.js';
 
 function loadClickedPage() {
   let pageIds = {
-    "nav-menu": loadMenuPage,
-    "nav-home": loadHomePage,
-    "nav-contact": loadContactPage,
+    "nav-menu": menupageContent,
+    "nav-home": homepageContent,
+    "nav-contact": contactpageContent,
   }
 
   let pageContent = document.getElementById('content');
@@ -14,7 +13,7 @@ function loadClickedPage() {
     pageContent.removeChild(pageContent.lastChild);
   }
   
-  pageIds[this.id]();
+  buildPage(pageIds[this.id]);
 }
 
 export { loadClickedPage };
