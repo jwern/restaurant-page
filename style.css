@@ -7,22 +7,30 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Amaranth', sans-serif;
 }
 
-#header-image {
-  width: 100%;
-  height: 400px;
-  background-size: cover;
+nav {
+  padding: 20px;
+  background-color: rgba(65, 116, 159, 0.2);
+  background-image: url("images/picnic_blanket_texture.png");
 }
 
-/* #header-image img {
-  max-width: 100%;
-  max-height: 100%;
-} */
+#content {
+  margin: 0 20px 20px 20px;
+}
+
+#header-image {
+  width: 100vw;
+  height: 400px;
+  background-size: cover;
+  margin-left: -20px;
+}
 
 .nav-links ul#navigation {
   display: flex;
@@ -30,6 +38,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-links ul#navigation li {
+  font-family: 'Amaranth', sans-serif;
   list-style-type: none;
   margin-right: 20px;
+}
+
+.nav-links ul#navigation li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.nav-links ul#navigation li a:hover {
+  color: #fed18e;
 }
