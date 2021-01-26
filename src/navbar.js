@@ -15,8 +15,6 @@ function loadClickedPage() {
   }
   
   pageIds[this.id]();
-  // clear children of content div
-  // run load for correct page
 }
 
 export { loadClickedPage };

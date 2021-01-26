@@ -1,9 +1,12 @@
 function loadContactPage() {
   let pageContent = document.getElementById('content');
 
-  let headerImage = document.createElement('img');
-  headerImage.src = "images/header_image.jpg";
-  headerImage.id = "header-image";
+  let headerContainer = document.createElement('div');
+  headerContainer.id = "header-image";
+  headerContainer.style.backgroundImage = "url(images/header_image.jpg)";
+  // let headerImage = document.createElement('img');
+  // headerImage.src = "images/header_image.jpg";
+  // headerImage.id = "header-image";
 
   let pageTitle = document.createElement('h1');
   pageTitle.id = "page-title";
@@ -14,7 +17,7 @@ function loadContactPage() {
   pageText.innerText = "Here's how you can contact us.";
 
   let children = [
-    headerImage, 
+    headerContainer, 
     pageTitle, 
     pageText
   ];

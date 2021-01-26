@@ -1,20 +1,25 @@
+import { homepageContent } from './pageContent.js';
+
 function loadHomePage() {
   let pageContent = document.getElementById('content');
 
-  let headerImage = document.createElement('img');
-  headerImage.src = "images/header_image.jpg";
-  headerImage.id = "header-image";
+  let headerContainer = document.createElement('div');
+  headerContainer.id = "header-image";
+  headerContainer.style.backgroundImage = `url(${homepageContent["headerImage"]})`;
+  // let headerImage = document.createElement('img');
+  // headerImage.src = homepageContent["headerImage"];
+  // headerContainer.appendChild(headerImage);
 
   let pageTitle = document.createElement('h1');
   pageTitle.id = "page-title";
-  pageTitle.innerText = "Breakfast Bar";
+  pageTitle.innerText = homepageContent["pageTitle"];
 
   let pageText = document.createElement('p');
   pageText.id = "page-intro";
-  pageText.innerText = "Welcome!  We have waffles, juice, eggs - you know, breakfast things.";
+  pageText.innerText = homepageContent["pageContent"];
 
   let children = [
-    headerImage, 
+    headerContainer, 
     pageTitle, 
     pageText
   ];
