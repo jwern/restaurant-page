@@ -4,9 +4,10 @@
 
 .nav-links ul#navigation {
   display: flex;
+  padding: 0;
 }
 
 .nav-links ul#navigation li {
   list-style-type: none;
-  margin: 20px;
+  margin-right: 20px;
 }
