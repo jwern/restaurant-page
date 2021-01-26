@@ -1,34 +1,17 @@
+import { loadHomePage } from './homePage.js'
+import { loadClickedPage } from './navbar.js'
+
 function initialPageLoad() {
   let pageContent = document.getElementById('content');
 
   let pageTabs = createTabs();
+  document.body.insertBefore(pageTabs, pageContent);
 
-  let headerImage = document.createElement('img');
-  headerImage.src = "images/header_image.jpg";
-  headerImage.id = "header-image";
-
-  let pageTitle = document.createElement('h1');
-  pageTitle.id = "page-title";
-  pageTitle.innerText = "Breakfast Bar";
-
-  let pageText = document.createElement('p');
-  pageText.id = "page-intro";
-  pageText.innerText = "Welcome!  We have waffles, juice, eggs - you know, breakfast things.";
-
-  let children = [
-    pageTabs,
-    headerImage, 
-    pageTitle, 
-    pageText
-  ];
-
-  for (let child of children) {
-    pageContent.appendChild(child);
-  };
+  loadHomePage();
 }
 
 function createTabs() {
-  let tabsDiv = document.createElement('div');
+  let tabsDiv = document.createElement('nav');
   tabsDiv.classList.add('nav-links');
 
   let navLinks = document.createElement('ul');
@@ -45,6 +28,7 @@ function createTabs() {
   ];
 
   for (let child of navChildren) {
+    child.addEventListener('click', loadClickedPage);
     navLinks.appendChild(child);
   };
 
@@ -58,6 +42,7 @@ function createListItem(text) {
   let listAnchor = document.createElement('a');
   
   listAnchor.href = `#${text}`;
+  listItem.id = `nav-${text.toLowerCase()}`;
   listAnchor.innerText = text;
 
   listItem.appendChild(listAnchor);
