@@ -2,10 +2,8 @@ import { loadHomePage } from './homePage.js'
 import { loadClickedPage } from './navbar.js'
 
 function initialPageLoad() {
-  let pageContent = document.getElementById('content');
-
   let pageTabs = createTabs();
-  document.body.insertBefore(pageTabs, pageContent);
+  document.body.prepend(pageTabs);
 
   loadHomePage();
 }
