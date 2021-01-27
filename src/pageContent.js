@@ -3,7 +3,9 @@ let homepageContent = {
   headerPosition: "initial",
   pageTitle: "The Breakfast Bar",
   pageContent: "Welcome!  We have waffles, juice, eggs - you know, breakfast things.",
-  className: "nav-home",
+  pageID: "nav-home",
+  navbarName: "Home",
+  initialLoad: true,
 };
 
 let menupageContent = {
@@ -11,7 +13,8 @@ let menupageContent = {
   headerPosition: "center",
   pageTitle: "Our Menu",
   pageContent: "Here's where we'll show off the menu.",
-  className: "nav-menu",
+  pageID: "nav-menu",
+  navbarName: "Menu",
 }
 
 let contactpageContent = {
@@ -19,7 +22,11 @@ let contactpageContent = {
   headerPosition: "center",
   pageTitle: "Contact Us",
   pageContent: "Here's how you can contact us.",
-  className: "nav-contact",
+  pageID: "nav-contact",
+  navbarName: "Contact",
 }
 
-export { homepageContent, menupageContent, contactpageContent };
+// Decide the order of the pages and list in the order in the content object
+let content = { homepageContent, menupageContent, contactpageContent };
+
+export { content };

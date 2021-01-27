@@ -1,11 +1,11 @@
-import * as content from './pageContent.js';
+import { content } from './pageContent.js';
 import { buildPage } from './buildPage.js';
 
 function loadClickedPage() {
   let pageIds = {};
 
   for (let page in content) {
-    pageIds[content[page]["className"]] = content[page];
+    pageIds[content[page]["pageID"]] = content[page];
   }
     // "nav-menu": content.menupageContent,
     // "nav-home": content.homepageContent,
@@ -15,7 +15,7 @@ function loadClickedPage() {
   while (pageContent.lastChild) {
     pageContent.removeChild(pageContent.lastChild);
   }
-  
+
   buildPage(pageIds[this.id]);
 }
 

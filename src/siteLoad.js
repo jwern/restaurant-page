@@ -1,12 +1,18 @@
+import { content } from './pageContent.js';
 import { buildPage } from './buildPage.js';
-import { homepageContent } from './pageContent.js';
 import { loadClickedPage } from './navbar.js';
 
 function initialPageLoad() {
   let pageTabs = createTabs();
   document.body.prepend(pageTabs);
 
-  buildPage(homepageContent);
+  for (let page in content) {
+    if (content[page]["initialLoad"]) {
+      var homepage = content[page]; 
+    }
+  }
+  
+  buildPage(homepage || content[Object.keys(content)[0]]);
 }
 
 function createTabs() {
@@ -16,16 +22,20 @@ function createTabs() {
   let navLinks = document.createElement('ul');
   navLinks.id = "navigation";
 
-  let navHome = createListItem("Home");
-  let navMenu = createListItem("Menu");
-  let navContact = createListItem("Contact");
+  let navChildren = [];
+  for (let page in content) {
+    navChildren.push(createListItem(content[page]));
+  }
+  // Hard-coded version:
+    // let navHome = createListItem("Home");
+    // let navMenu = createListItem("Menu");
+    // let navContact = createListItem("Contact");
 
-  let navChildren = [
-    navHome,
-    navMenu,
-    navContact
-  ];
-
+    // let navChildren = [
+    //   navHome,
+    //   navMenu,
+    //   navContact
+    // ];
   for (let child of navChildren) {
     child.addEventListener('click', loadClickedPage);
     navLinks.appendChild(child);
@@ -36,13 +46,13 @@ function createTabs() {
   return tabsDiv;
 }
 
-function createListItem(text) {
+function createListItem(page) {
   let listItem = document.createElement('li');
   let listAnchor = document.createElement('a');
   
-  listAnchor.href = `#${text}`;
-  listItem.id = `nav-${text.toLowerCase()}`;
-  listAnchor.innerText = text;
+  listAnchor.href = `#${page["navbarName"]}`;
+  listItem.id = `${page["pageID"]}`;
+  listAnchor.innerText = `${page["navbarName"]}`;
 
   listItem.appendChild(listAnchor);
   return listItem;
