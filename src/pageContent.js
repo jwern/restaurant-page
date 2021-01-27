@@ -3,13 +3,15 @@ let homepageContent = {
   headerPosition: "initial",
   pageTitle: "The Breakfast Bar",
   pageContent: "Welcome!  We have waffles, juice, eggs - you know, breakfast things.",
+  className: "nav-home",
 };
 
 let menupageContent = {
   headerImage: "images/waffle_plate.jpg",
   headerPosition: "center",
   pageTitle: "Our Menu",
-  pageContent: "Here's where we'll show off the menu."
+  pageContent: "Here's where we'll show off the menu.",
+  className: "nav-menu",
 }
 
 let contactpageContent = {
@@ -17,6 +19,7 @@ let contactpageContent = {
   headerPosition: "center",
   pageTitle: "Contact Us",
   pageContent: "Here's how you can contact us.",
+  className: "nav-contact",
 }
 
 export { homepageContent, menupageContent, contactpageContent };

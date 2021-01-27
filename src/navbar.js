@@ -1,12 +1,15 @@
-import { homepageContent, menupageContent, contactpageContent } from './pageContent.js';
+import * as content from './pageContent.js';
 import { buildPage } from './buildPage.js';
 
 function loadClickedPage() {
-  let pageIds = {
-    "nav-menu": menupageContent,
-    "nav-home": homepageContent,
-    "nav-contact": contactpageContent,
+  let pageIds = {};
+
+  for (let page in content) {
+    pageIds[content[page]["className"]] = content[page];
   }
+    // "nav-menu": content.menupageContent,
+    // "nav-home": content.homepageContent,
+    // "nav-contact": content.contactpageContent,
 
   let pageContent = document.getElementById('content');
   while (pageContent.lastChild) {
