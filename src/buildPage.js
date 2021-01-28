@@ -1,4 +1,7 @@
 function buildPage(page) {
+  let navText = document.getElementById(page["pageID"]);
+  navText.classList.add('orange');
+  
   let pageContent = document.getElementById('content');
 
   let headerContainer = document.createElement('div');

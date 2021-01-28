@@ -6,10 +6,8 @@ function loadClickedPage() {
 
   for (let page in content) {
     pageIds[content[page]["pageID"]] = content[page];
+    document.getElementById(content[page]["pageID"]).classList.remove('orange');
   }
-    // "nav-menu": content.menupageContent,
-    // "nav-home": content.homepageContent,
-    // "nav-contact": content.contactpageContent,
 
   let pageContent = document.getElementById('content');
   while (pageContent.lastChild) {

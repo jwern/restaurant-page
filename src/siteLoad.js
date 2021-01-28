@@ -26,16 +26,7 @@ function createTabs() {
   for (let page in content) {
     navChildren.push(createListItem(content[page]));
   }
-  // Hard-coded version:
-    // let navHome = createListItem("Home");
-    // let navMenu = createListItem("Menu");
-    // let navContact = createListItem("Contact");
-
-    // let navChildren = [
-    //   navHome,
-    //   navMenu,
-    //   navContact
-    // ];
+ 
   for (let child of navChildren) {
     child.addEventListener('click', loadClickedPage);
     navLinks.appendChild(child);
