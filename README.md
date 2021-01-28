@@ -18,9 +18,8 @@ A challenge I set for myself and accomplished was making the pages and their con
 
 ## Screenshots ##
 
-TBA
-<!-- ![Desktop view screenshot](TBA)
-![Mobile view screenshot](TBA) -->
+![Desktop view screenshot](/images/restaurant_desktop_screenshot.png)
+![Mobile view screenshot](/images/restaurant_mobile_screenshot.png)
 
 ## To Do ##
 
