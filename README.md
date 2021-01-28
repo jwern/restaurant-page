@@ -18,8 +18,8 @@ A challenge I set for myself and accomplished was making the pages and their con
 
 ## Screenshots ##
 
-![Desktop view screenshot](/images/restaurant_desktop_screenshot.png)
-![Mobile view screenshot](/images/restaurant_mobile_screenshot.png)
+![Desktop view screenshot](/screenshots/restaurant_desktop_screenshot.png)
+![Mobile view screenshot](/screenshots/restaurant_mobile_screenshot.png)
 
 ## To Do ##
 
