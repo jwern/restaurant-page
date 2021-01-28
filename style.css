@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
+:root {
+  --nav-blue: rgba(65, 116, 159, 0.2);
+  --nav-orange: #fed18e;
+  --nav-white: rgb(250, 243, 234);
+  --standard-padding: 20px;
+}
+
 html {
   font-size: 20px;
 }
@@ -16,20 +23,20 @@ h1, h2, h3, h4, h5 {
 }
 
 nav {
-  padding: 20px;
-  background-color: rgba(65, 116, 159, 0.2);
+  padding: var(--standard-padding);
+  background-color: var(--nav-blue);
   background-image: url("images/picnic_blanket_texture.png");
 }
 
 #content {
-  margin: 0 20px 20px 20px;
+  margin: 0 var(--standard-padding) var(--standard-padding);
 }
 
 #header-image {
   width: 100vw;
   height: 400px;
   background-size: cover;
-  margin-left: -20px;
+  margin-left: calc(var(--standard-padding) *-1);
 }
 
 .nav-links ul#navigation {
@@ -40,16 +47,20 @@ nav {
 .nav-links ul#navigation li {
   font-family: 'Amaranth', sans-serif;
   list-style-type: none;
-  margin-right: 20px;
+  margin-right: var(--standard-padding);
 }
 
 .nav-links ul#navigation li a {
   text-decoration: none;
-  color: white;
+  color: var(--nav-white);
   font-weight: 900;
   font-size: 1.25rem;
 }
 
 .nav-links ul#navigation li a:hover {
-  color: #fed18e;
+  color: var(--nav-orange);
+}
+
+.nav-links ul#navigation li.orange a {
+  color: var(--nav-orange);
 }
