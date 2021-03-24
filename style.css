@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 
 :root {
   --nav-blue: rgba(65, 116, 159, 0.2);
@@ -12,14 +12,18 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   padding: 0;
   margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Amaranth', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Amaranth", sans-serif;
 }
 
 nav {
@@ -28,15 +32,15 @@ nav {
   background-image: url("images/picnic_blanket_texture.png");
 }
 
-#content {
+#content .padded-content {
   margin: 0 var(--standard-padding) var(--standard-padding);
 }
 
 #header-image {
-  width: 100vw;
+  width: 100%;
   height: 400px;
   background-size: cover;
-  margin-left: calc(var(--standard-padding) *-1);
+  margin-bottom: calc(var(--standard-padding) * 2);
 }
 
 .nav-links ul#navigation {
@@ -45,7 +49,7 @@ nav {
 }
 
 .nav-links ul#navigation li {
-  font-family: 'Amaranth', sans-serif;
+  font-family: "Amaranth", sans-serif;
   list-style-type: none;
   margin-right: var(--standard-padding);
 }
