@@ -11,10 +11,12 @@ function buildPage(page) {
 
   let pageTitle = document.createElement('h1');
   pageTitle.id = "page-title";
+  pageTitle.classList.add('padded-content');
   pageTitle.innerText = page["pageTitle"];
 
   let pageText = document.createElement('p');
   pageText.id = "page-intro";
+  pageText.classList.add('padded-content');
   pageText.innerText = page["pageContent"];
 
   let children = [

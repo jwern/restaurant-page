@@ -4,7 +4,9 @@ import { loadClickedPage } from './navbar.js';
 
 function initialPageLoad() {
   let pageTabs = createTabs();
-  document.body.prepend(pageTabs);
+  const contentDiv = document.getElementById('content');
+  document.body.insertBefore(pageTabs, contentDiv);
+  // document.body.prepend(pageTabs);
 
   for (let page in content) {
     if (content[page]["initialLoad"]) {
