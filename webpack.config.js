@@ -21,5 +21,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  output: {
+    environment: {
+      arrowFunction: false,
+    },
+  },
 };
